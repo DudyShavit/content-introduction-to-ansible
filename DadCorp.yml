@@ -10,3 +10,8 @@
       git:
         dest: /var/www/html
         repo: https://github.com/linuxacademy/content-introduction-to-ansible.git
+    - name: Start the Apache service
+      service:
+        name: apache2
+        state: started
+    
