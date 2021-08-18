@@ -1,10 +1,10 @@
 ---
-- hosts: all
+- hosts: localhost
   become: yes
   tasks:
     - name: Install Apache
-      yum: 
-        name: httpd
+      apt: 
+        name: apache2
         state: latest
     - name: git checkout the website
       git:
