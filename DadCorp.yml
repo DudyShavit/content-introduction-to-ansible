@@ -6,6 +6,8 @@
       apt: 
         name: apache2
         state: latest
+    - name: remove old web page
+      command: "rm /var/www/html -r" 
     - name: git checkout the website
       git:
         dest: /var/www/html
